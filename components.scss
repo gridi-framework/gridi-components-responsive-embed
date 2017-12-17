@@ -2,7 +2,12 @@
     overflow: hidden;
     position: relative;
     height: 0;
-    @include include-element-margin($gridi-components-responsive-embed-margin-top, $gridi-components-responsive-embed-margin-bottom, $gridi-components-responsive-embed-margin-left, $gridi-components-responsive-embed-margin-right, $gridi-components-responsive-embed-margin-for-screens);
+    @include margin-shorthand-with-screens-support((
+        top: $gridi-components-responsive-embed-margin-top,
+        bottom: $gridi-components-responsive-embed-margin-bottom,
+        left: $gridi-components-responsive-embed-margin-left,
+        right: $gridi-components-responsive-embed-margin-right
+    ), $gridi-components-responsive-embed-margin-for-screens);
     padding: 0;
     padding-bottom: $gridi-components-responsive-embed-ratio;
 
